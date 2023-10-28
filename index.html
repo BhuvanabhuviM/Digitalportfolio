@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bhuvaneshwari - portfolio</title>
+        <style>
+            body {
+                font-family: Arial,sans-serif;
+                margin:0;
+                padding:0;
+                background-color:#2fafcf21;
+            }
+            header{
+                background-color:#1787e4;
+                color:rgb(36, 30, 32);
+                text-align:  center;
+                padding: 2rem 0;
+                position: relative;/*add this*/
+            }
+
+            .header-content h1{
+                font-size: 2.5rem;
+            }
+
+            /* add styles for the rount profile picture*/
+            .profile-picture {
+                width:180px;/*adjust the size as needed*/
+                height: 180px;
+                border-radius: 360%;/*create a circular shape*/
+                position: absolute;/*add this*/
+                top: 75px;/*adjust top position as needed*/
+                left: 75px;/*adjust left position as need*/
+            }
+
+            nav{
+                background-color: rgb(233, 33, 156);
+                color: #599713;
+                text-align: center;
+            }
+
+            nav u1{
+                list-style-type: none;
+                padding:0;
+            }
+
+            nav u1 li{
+                display: inline;
+                margin:0 20px;
+            }
+
+            nav u1 li a{
+                text-decoration: none;
+                color: #212522;
+            }
+
+            .section-content{
+                background-color: #55a3b657;
+                padding: 2rem;
+                margin: 1rem;
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            .download-button{
+                background-color: #17c944;
+                color: #fff;
+                padding:0.5rem 1rem;
+                text-decoration: none;
+                border-radius: 20px;
+                display: inline-block;
+                margin-top:10px;
+            }
+
+            .download-button:hover{
+                background-color: #39ce1c;
+            }
+
+            footer{
+                text-align:center;
+                padding: 1rem 0;
+                background-color: #333;
+                color: #fff;
+            }
+
+            u1{
+                list-style-type:disc;
+                padding-left:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <!--add your profile picture here-->
+                <img src="bhuvana.jpg" alt="your profile picture" class="profile-picture">
+                <h1>BHUVANESHWARI M</h1>
+                <P>Hii i am a college student</P>
+            </div>
+        </header>
+
+        <nav>
+            <u1>
+                <li><a href=#bio data">Bio Data</a></li>
+                <li><a href="#about me">About me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </u1>
+        </nav>
+
+        <section id="bio data">
+            <div class="section-content">
+                <h2>Bio Data</h2>
+                <p>Name:M.Bhuvaneshwari </p>
+                <p>Date of Birth:24/10/2003</p>
+                <p>Address:Kalapatty,Dindigul</p>
+            </div>
+        </section>
+
+        <section id="about me">
+            <div class="section-content">
+                <h2>About Me</h2>
+                <p>Hii i'm Bhuvaneshwari,currently pursuing my 3rd year of BSC in Computer science.
+                    I have a stroug passion for creating and developing web pages,and i am proficient
+                    in programming languages such as ASP.net,c#,PHP,HTML,CSS,MYSQL.In my free time ,listening
+                    to music,watch Tv programs,and exploring other hobbies.                </p>
+            </div>
+        </section>
+
+        <sectoin id="skills">
+            <div class="section-content">
+                <h2>skills</h2>
+                <p>->web development</p>
+                <p>->programming languages(e.g..C#,ASP.NET,PHP,HTML,CSS)</p>
+                <p>->Team work</p>
+                <p>->Problem-solving</p>
+                <p>->Time Management</p>
+            </div>
+        </sectoin>
+        <section id="resume">
+            <center>
+                <div class="section-content">
+                    <h2>Resume</h2>
+                </div>
+            </center>
+        </section>
+
+        <footer>
+            <p>&copy;2023 bhuvaneshwari</p>
+        </footer>
+
+        <script>
+            // smooth scrolling to section when clicking on navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
+                anchor.addEventListener('click',function(e)-{
+                    e.preventDefault();
+
+                    const targetId=this.getAttribute('href').substring(1);
+                    const targetElement=document.getElementById(targetId);
+
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior:'smooth'
+                        })
+                    }
+
+                })
+            })
+        </script>
+    </body>
+</html>
